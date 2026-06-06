@@ -35,6 +35,7 @@ import LandFreightPage from "./pages/LandFreightPage";
 import CustomsClearancePage from "./pages/CustomsClearancePage";
 import FAQPage from "./pages/FAQPage";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 const PHONES = [
   "0556053924",
@@ -48,7 +49,7 @@ const NAV = [
   { label: "خدماتنا", to: "/#services" },
   { label: "من نحن", to: "/من-نحن" },
   { label: "الأسئلة الشائعة", to: "/الأسئلة-الشائعة" },
-  { label: "تواصل معنا", to: "/#contact" },
+  { label: "تواصل معنا", to: "/contact" },
 ];
 
 const SERVICES = [
@@ -715,9 +716,9 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <NavHashLink to="/#contact" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
+                <Link to="/contact" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
                   <ChevronLeft className="w-4 h-4 text-brand-gold" /> تواصل معنا
-                </NavHashLink>
+                </Link>
               </li>
             </ul>
           </div>
@@ -839,6 +840,7 @@ export default function App() {
           <Route path="/تخليص-جمركي" element={<CustomsClearancePage />} />
           <Route path="/من-نحن" element={<AboutPage />} />
           <Route path="/الأسئلة-الشائعة" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />
