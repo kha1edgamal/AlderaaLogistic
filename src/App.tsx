@@ -21,6 +21,7 @@ import {
   BadgeCheck,
   ChevronLeft,
   Warehouse,
+  MessageSquare,
 } from "lucide-react";
 
 import logoImg from "./assets/logo.png";
@@ -173,13 +174,13 @@ function NavHashLink({
 
 function Logo({ light = true }: { light?: boolean }) {
   return (
-    <Link to="/" className="flex items-center gap-3">
-      <img src={logoImg} alt="الدرع اللوجيستي للشحن - خدمات نقل لوجستي متكاملة" className="w-12 h-12 object-contain" />
+    <Link to="/" className="flex items-center gap-2 sm:gap-3">
+      <img src={logoImg} alt="الدرع اللوجيستي للشحن - خدمات نقل لوجستي متكاملة" className="w-9 h-9 sm:w-12 sm:h-12 object-contain" />
       <div className="flex flex-col leading-tight">
-        <span className={`${light ? "text-white" : "text-brand-navy"} font-extrabold text-base sm:text-lg`}>
+        <span className={`${light ? "text-white" : "text-brand-navy"} font-extrabold text-xs sm:text-base md:text-lg`}>
           الدرع اللوجيستي للشحن
         </span>
-        <span className="gold-text text-[10px] sm:text-xs tracking-[0.25em] font-bold">ALDERAA FOR SHIPPING</span>
+        <span className="gold-text text-[8px] sm:text-[10px] md:text-xs tracking-[0.15em] sm:tracking-[0.25em] font-bold hidden sm:block">ALDERAA FOR SHIPPING</span>
       </div>
     </Link>
   );
@@ -200,8 +201,8 @@ function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-brand-navy/95 backdrop-blur shadow-lg" : "bg-brand-navy/70 backdrop-blur-sm"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 gap-1 sm:gap-4">
           <Logo />
           <nav className="hidden lg:flex items-center gap-8">
             {NAV.map((item) => (
@@ -216,15 +217,14 @@ function Navbar() {
           </nav>
           <a
             href={`tel:${PRIMARY_PHONE}`}
-            className="hidden md:inline-flex items-center gap-2 gold-gradient text-brand-navy font-extrabold px-5 py-2.5 rounded-full text-sm shadow-lg hover:scale-105 transition-transform"
-
+            className="flex items-center gap-1 sm:gap-2 gold-gradient text-brand-navy font-extrabold px-2.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full text-[11px] sm:text-sm shadow-lg hover:scale-105 transition-transform shrink-0"
           >
-            <Phone className="w-4 h-4" strokeWidth={2.5} />
-            {PRIMARY_PHONE}
+            <Phone className="w-3.5 h-3.5" strokeWidth={2.5} />
+            <span dir="ltr">{PRIMARY_PHONE}</span>
           </a>
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-white w-10 h-10 flex items-center justify-center"
+            className="lg:hidden text-white w-10 h-10 flex items-center justify-center shrink-0"
             aria-label="القائمة"
           >
             {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -291,22 +291,83 @@ function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href={`tel:${PHONES[0]}`}
+                href={`tel:${PRIMARY_PHONE}`}
                 className="gold-gradient text-brand-navy font-extrabold px-8 py-4 rounded-full text-base shadow-2xl hover:scale-105 transition-transform inline-flex items-center justify-center gap-2"
-
               >
-                <Phone className="w-4 h-4" strokeWidth={3} />
-                الشحن الداخلي
+                <Phone className="w-5 h-5 animate-pulse" strokeWidth={2.5} />
+                اتصل الآن
               </a>
               <a
-                href={`tel:${PHONES[1]}`}
+                href={`https://wa.me/966${PRIMARY_PHONE.replace(/^0/, "")}?text=${encodeURIComponent(
+                  "السلام عليكم، أريد الحصول على عرض سعر للشحن"
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-navy font-bold px-8 py-4 rounded-full text-base transition-all inline-flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4" strokeWidth={3} />
-                الشحن الدولي
+                <MessageSquare className="w-5 h-5" />
+                احصل على عرض سعر
               </a>
             </div>
-            <div className="grid grid-cols-3 gap-4 mt-12 max-w-xl mx-auto lg:mx-0">
+
+            <div className="mt-8 border-t border-white/15 pt-6 max-w-xl mx-auto lg:mx-0 text-right">
+              <p className="text-brand-gold-light text-sm font-bold mb-4 flex items-center gap-2 justify-center lg:justify-start">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
+                أرقام التواصل المباشر للحصول على تسعيرة فورية:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a
+                  href={`tel:${PHONES[0]}`}
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 transition-all group justify-start"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <Phone className="w-5 h-5 text-brand-gold" />
+                  </div>
+                  <div>
+                    <span className="text-white/60 text-[10px] block">الشحن الداخلي والتخليص</span>
+                    <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[0]}</span>
+                  </div>
+                </a>
+                <a
+                  href={`tel:${PHONES[1]}`}
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 transition-all group justify-start"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <Phone className="w-5 h-5 text-brand-gold" />
+                  </div>
+                  <div>
+                    <span className="text-white/60 text-[10px] block">الشحن الدولي والوجهات</span>
+                    <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[1]}</span>
+                  </div>
+                </a>
+                <a
+                  href={`tel:${PHONES[2]}`}
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 transition-all group justify-start"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <Phone className="w-5 h-5 text-brand-gold" />
+                  </div>
+                  <div>
+                    <span className="text-white/60 text-[10px] block">نقل وتغليف الأثاث</span>
+                    <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[2]}</span>
+                  </div>
+                </a>
+                <a
+                  href={`tel:${PHONES[3]}`}
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 transition-all group justify-start"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <Phone className="w-5 h-5 text-brand-gold" />
+                  </div>
+                  <div>
+                    <span className="text-white/60 text-[10px] block">الدعم وخدمة العملاء</span>
+                    <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[3]}</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 mt-8 max-w-xl mx-auto lg:mx-0">
               <div className=" text-center lg:text-right">
                 <div className="text-3xl font-extrabold text-brand-gold-light">+15</div>
                 <div className="text-white/70 text-sm">عاماً من الخبرة</div>
