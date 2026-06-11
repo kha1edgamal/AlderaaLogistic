@@ -208,7 +208,7 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Vision */}
-            <div className="relative bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="relative bg-gray-50 border border-gray-100 rounded-3xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 overflow-hidden group">
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full gold-gradient transition-all duration-500" />
               <div className="w-16 h-16 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
                 <Eye className="w-8 h-8 text-brand-gold" strokeWidth={2} />
@@ -223,7 +223,7 @@ export default function AboutPage() {
             </div>
 
             {/* Mission */}
-            <div className="relative bg-gray-50 border border-gray-100 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 overflow-hidden group">
+            <div className="relative bg-gray-50 border border-gray-100 rounded-3xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 overflow-hidden group">
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full gold-gradient transition-all duration-500" />
               <div className="w-16 h-16 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-brand-gold" strokeWidth={2} />
@@ -308,7 +308,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={v.title}
-                  className="relative bg-gray-50 rounded-3xl p-10 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
+                  className="relative bg-gray-50 rounded-3xl p-6 sm:p-10 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
                 >
                   <div className="absolute top-8 right-8 w-3 h-3 rounded-full bg-brand-gold" />
                   <div className="w-24 h-24 mx-auto rounded-full gold-gradient flex items-center justify-center mb-6 shadow-xl">
@@ -349,7 +349,7 @@ export default function AboutPage() {
       {/* Stats */}
       <section className="stats-bg py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {STATS.map((s) => {
               const SIcon = s.icon;
               return (
@@ -360,10 +360,10 @@ export default function AboutPage() {
                       strokeWidth={2.5}
                     />
                   </div>
-                  <div className="text-5xl sm:text-6xl font-extrabold gold-text mb-2">
+                  <div className="text-3xl sm:text-5xl lg:text-6xl font-extrabold gold-text mb-2">
                     {s.num}
                   </div>
-                  <div className="text-white/80 text-base">{s.label}</div>
+                  <div className="text-white/80 text-sm sm:text-base">{s.label}</div>
                 </div>
               );
             })}

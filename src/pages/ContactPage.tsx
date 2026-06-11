@@ -128,11 +128,11 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Card 1: Phone numbers */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
+            <div className="bg-white rounded-3xl p-5 sm:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full gold-gradient transition-all duration-500" />
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
-                  <Phone className="w-7 h-7 text-brand-gold" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
+                  <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-brand-gold" />
                 </div>
                 <h3 className="text-xl font-extrabold text-brand-navy mb-3">أرقام التواصل</h3>
                 <p className="text-gray-500 text-sm mb-6">اتصل بنا مباشرة للتحدث مع أحد ممثلي الدعم الفوري:</p>
@@ -152,11 +152,11 @@ export default function ContactPage() {
             </div>
 
             {/* Card 2: WhatsApp */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
+            <div className="bg-white rounded-3xl p-5 sm:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full gold-gradient transition-all duration-500" />
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
-                  <MessageSquare className="w-7 h-7 text-brand-gold" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
+                  <MessageSquare className="w-6 h-6 sm:w-7 sm:h-7 text-brand-gold" />
                 </div>
                 <h3 className="text-xl font-extrabold text-brand-navy mb-3">المحادثة الفورية</h3>
                 <p className="text-gray-500 text-sm mb-6">تواصل معنا الآن واطلب تسعيرة شحن فورية عبر واتساب:</p>
@@ -175,11 +175,11 @@ export default function ContactPage() {
             </div>
 
             {/* Card 3: Email */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
+            <div className="bg-white rounded-3xl p-5 sm:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full gold-gradient transition-all duration-500" />
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
-                  <Mail className="w-7 h-7 text-brand-gold" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
+                  <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-brand-gold" />
                 </div>
                 <h3 className="text-xl font-extrabold text-brand-navy mb-3">البريد الإلكتروني</h3>
                 <p className="text-gray-500 text-sm mb-6">راسلنا بخصوص استفساراتك أو إرسال المستندات لوجهتك:</p>
@@ -196,11 +196,11 @@ export default function ContactPage() {
             </div>
 
             {/* Card 4: Location & Work Hours */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
+            <div className="bg-white rounded-3xl p-5 sm:p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full relative overflow-hidden group">
               <div className="absolute top-0 left-0 h-1 w-0 group-hover:w-full gold-gradient transition-all duration-500" />
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
-                  <MapPin className="w-7 h-7 text-brand-gold" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-brand-navy flex items-center justify-center mb-6">
+                  <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-brand-gold" />
                 </div>
                 <h3 className="text-xl font-extrabold text-brand-navy mb-3">مقرنا وأوقات العمل</h3>
                 <p className="text-gray-500 text-sm mb-4">الرياض، المملكة العربية السعودية - ونغطي كافة مناطق المملكة.</p>
@@ -216,7 +216,7 @@ export default function ContactPage() {
           </div>
 
           {/* Large Bottom Info Banner */}
-          <div className="mt-16 cta-bg rounded-[2rem] p-8 sm:p-12 text-white relative overflow-hidden shadow-lg">
+          <div className="mt-16 cta-bg rounded-[2rem] p-5 sm:p-12 text-white relative overflow-hidden shadow-lg">
             <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-brand-gold/10 blur-3xl" />
             <div className="relative z-10 grid md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-8 space-y-4">

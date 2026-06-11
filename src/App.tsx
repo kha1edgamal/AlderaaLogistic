@@ -220,7 +220,7 @@ function Navbar() {
             className="flex items-center gap-1 sm:gap-2 gold-gradient text-brand-navy font-extrabold px-2.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full text-[11px] sm:text-sm shadow-lg hover:scale-105 transition-transform shrink-0"
           >
             <Phone className="w-3.5 h-3.5" strokeWidth={2.5} />
-            <span dir="ltr">{PRIMARY_PHONE}</span>
+            <span dir="ltr" className="hidden min-[400px]:inline">{PRIMARY_PHONE}</span>
           </a>
           <button
             onClick={() => setOpen(!open)}
@@ -367,18 +367,18 @@ function Hero() {
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 mt-8 max-w-xl mx-auto lg:mx-0">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 mt-8 max-w-xl mx-auto lg:mx-0">
               <div className=" text-center lg:text-right">
-                <div className="text-3xl font-extrabold text-brand-gold-light">+15</div>
-                <div className="text-white/70 text-sm">عاماً من الخبرة</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-brand-gold-light">+15</div>
+                <div className="text-white/70 text-xs sm:text-sm">عاماً من الخبرة</div>
               </div>
               <div className="border-r border-white/20 text-center">
-                <div className="text-3xl font-extrabold text-brand-gold-light">+120</div>
-                <div className="text-white/70 text-sm">وجهة عالمية</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-brand-gold-light">+120</div>
+                <div className="text-white/70 text-xs sm:text-sm">وجهة عالمية</div>
               </div>
               <div className="border-r border-white/20 text-center lg:text-left">
-                <div className="text-3xl font-extrabold text-brand-gold-light">+5000</div>
-                <div className="text-white/70 text-sm">عميل سعيد</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-brand-gold-light">+5000</div>
+                <div className="text-white/70 text-xs sm:text-sm">عميل سعيد</div>
               </div>
             </div>
           </div>
@@ -607,7 +607,7 @@ function Stats() {
   return (
     <section className="stats-bg py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {stats.map((s) => {
             const Icon = s.icon;
             return (
@@ -615,8 +615,8 @@ function Stats() {
                 <div className="w-16 h-16 mx-auto rounded-full gold-gradient flex items-center justify-center mb-3 shadow-xl">
                   <Icon className="w-8 h-8 text-brand-navy" strokeWidth={2.5} />
                 </div>
-                <div className="text-5xl sm:text-6xl font-extrabold gold-text mb-2">{s.num}</div>
-                <div className="text-white/80 text-base">{s.label}</div>
+                <div className="text-3xl sm:text-5xl lg:text-6xl font-extrabold gold-text mb-2">{s.num}</div>
+                <div className="text-white/80 text-sm sm:text-base">{s.label}</div>
               </div>
             );
           })}
@@ -633,7 +633,7 @@ function Contact() {
         <div className="cta-bg rounded-[2.5rem] overflow-hidden relative">
           <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-brand-gold/10 blur-3xl" />
           <div className="relative grid lg:grid-cols-2 gap-0">
-            <div className="p-8 sm:p-12 lg:p-16">
+            <div className="p-5 sm:p-12 lg:p-16">
               <div className="inline-block text-brand-gold-light text-sm font-bold tracking-[0.3em] mb-3">
                 تواصل معنا
               </div>
@@ -642,30 +642,30 @@ function Contact() {
                 <br />
                 <span className="gold-text">على مدار الساعة</span>
               </h2>
-              <p className="text-white/70 text-lg mb-10 leading-relaxed">
+              <p className="text-white/70 text-base sm:text-lg mb-8 leading-relaxed">
                 احصل على عرض سعر فوري لشحنتك الآن، فريق الدعم الخاص بنا جاهز للرد على جميع استفساراتك
                 على مدار 24 ساعة.
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {PHONES.map((p, i) => (
                   <a
                     key={p}
                     href={`tel:${p}`}
-                    className="flex items-center gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-5 transition-all group"
+                    className="flex items-center gap-3 sm:gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 sm:p-5 transition-all group"
                   >
-                    <div className="relative w-14 h-14 rounded-full gold-gradient flex items-center justify-center shrink-0">
-                      <Phone className="w-6 h-6 text-brand-navy relative z-10" strokeWidth={2.5} />
+                    <div className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-full gold-gradient flex items-center justify-center shrink-0">
+                      <Phone className="w-4 h-4 sm:w-6 sm:h-6 text-brand-navy relative z-10" strokeWidth={2.5} />
                       <span className="pulse-ring absolute inset-0 rounded-full" />
                     </div>
                     <div>
-                      <div className="text-white/60 text-xs mb-1">رقم التواصل {i + 1}</div>
-                      <div className="text-white font-extrabold text-xl tracking-wide group-hover:text-brand-gold-light transition-colors" dir="ltr">
+                      <div className="text-white/60 text-[10px] sm:text-xs mb-1">رقم التواصل {i + 1}</div>
+                      <div className="text-white font-extrabold text-base sm:text-xl tracking-wide group-hover:text-brand-gold-light transition-colors" dir="ltr">
                         {p}
                       </div>
                     </div>
                     <span className="mr-auto text-brand-gold opacity-0 group-hover:opacity-100 group-hover:translate-x-[-4px] transition-all">
-                      <ArrowLeft className="w-6 h-6" />
+                      <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                     </span>
                   </a>
                 ))}
@@ -706,9 +706,9 @@ function FloatingCall() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="تواصل معنا عبر واتساب"
-      className="fixed bottom-6 left-6 z-40 w-16 h-16 rounded-full bg-[#25D366] hover:bg-[#20ba5a] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+      className="fixed bottom-6 left-6 z-[999] w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] hover:bg-[#20ba5a] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
     >
-      <svg viewBox="0 0 24 24" className="w-8 h-8 text-white relative z-10" fill="currentColor">
+      <svg viewBox="0 0 24 24" className="w-7 h-7 sm:w-8 sm:h-8 text-white relative z-10" fill="currentColor">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.028 14.07 1.001 11.996 1c-5.44 0-9.866 4.372-9.87 9.802 0 1.714.47 3.393 1.357 4.869l-.993 3.629 3.567-.946zm10.707-5.32c-.29-.146-1.72-.85-1.987-.948-.268-.099-.463-.147-.659.146-.196.293-.755.948-.927 1.144-.171.195-.343.219-.633.073-.29-.147-1.226-.452-2.336-1.444-.864-.772-1.448-1.724-1.618-2.016-.17-.293-.018-.452.128-.598.131-.131.29-.341.436-.512.145-.17.194-.292.292-.487.097-.195.048-.366-.024-.512-.072-.146-.659-1.586-.902-2.17-.237-.57-.497-.493-.659-.501-.17-.008-.366-.01-.56-.01-.196 0-.512.073-.78.366-.269.293-1.025 1.002-1.025 2.441 0 1.439 1.048 2.83 1.194 3.025.147.195 2.062 3.149 4.996 4.417.698.302 1.243.482 1.667.617.7.223 1.338.192 1.843.116.562-.085 1.72-.703 1.963-1.382.244-.679.244-1.261.171-1.382-.073-.12-.269-.195-.558-.34z" />
       </svg>
       <span className="pulse-ring-whatsapp absolute inset-0 rounded-full" />
@@ -889,7 +889,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white" dir="rtl">
+    <div className="min-h-screen bg-white overflow-x-hidden" dir="rtl">
       <ScrollToTop />
       <Navbar />
       <main>
