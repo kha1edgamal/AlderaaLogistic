@@ -28,7 +28,7 @@ interface ServicePageLayoutProps {
   phones?: string[];
 }
 
-const DEFAULT_PHONES = ["0556053924", "0556295307", "0556029104", "0537912011"];
+const DEFAULT_PHONES = ["0563569761", "0556295307"];
 
 export default function ServicePageLayout({
   slug,

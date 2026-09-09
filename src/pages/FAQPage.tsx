@@ -13,7 +13,7 @@ const GENERAL_FAQ = [
   {
     question: "كيف يمكنني الحصول على عرض سعر لشحنتي؟",
     answer:
-      "يمكنك التواصل معنا مباشرة عبر الهاتف على الأرقام: 0556053924 أو 0556295307 أو عبر واتساب للحصول على عرض سعر فوري ومخصص لشحنتك. فريق الدعم متاح على مدار الساعة.",
+      "يمكنك التواصل معنا مباشرة عبر الهاتف على الأرقام: 0563569761 أو 0556295307 أو عبر واتساب للحصول على عرض سعر فوري ومخصص لشحنتك. فريق الدعم متاح على مدار الساعة.",
   },
   {
     question: "ما هي الدول التي تغطيها خدمات الشحن؟",
@@ -68,7 +68,7 @@ const GENERAL_FAQ = [
   {
     question: "كيف أتواصل مع خدمة العملاء؟",
     answer:
-      "يمكنك التواصل معنا عبر: الهاتف: 0556053924 | 0556295307 | 0556029104 | 0537912011 أو عبر واتساب على نفس الأرقام. فريقنا جاهز لخدمتك على مدار الساعة.",
+      "يمكنك التواصل معنا عبر: الهاتف: 0563569761 | 0556295307 أو عبر واتساب على نفس الأرقام. فريقنا جاهز لخدمتك على مدار الساعة.",
   },
 ];
 
@@ -144,7 +144,7 @@ export default function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:0556053924"
+              href="tel:0563569761"
               className="gold-gradient text-brand-navy font-extrabold px-10 py-4 rounded-full text-lg shadow-2xl hover:scale-105 transition-transform inline-flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" strokeWidth={3} />

@@ -110,10 +110,8 @@ export default function AboutPage() {
       addressCountry: "SA",
     },
     telephone: [
-      "+966556053924",
+      "+966563569761",
       "+966556295307",
-      "+966556029104",
-      "+966537912011",
     ],
     areaServed: [
       "Saudi Arabia",
@@ -383,7 +381,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:0556053924"
+              href="tel:0563569761"
               className="gold-gradient text-brand-navy font-extrabold px-10 py-4 rounded-full text-lg shadow-2xl hover:scale-105 transition-transform inline-flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" strokeWidth={3} />

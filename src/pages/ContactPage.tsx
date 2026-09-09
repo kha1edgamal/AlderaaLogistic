@@ -14,10 +14,8 @@ import Breadcrumb from "../components/Breadcrumb";
 import logoImg from "../assets/logo.png";
 
 const PHONES = [
-  "0556053924",
+  "0563569761",
   "0556295307",
-  "0556029104",
-  "0537912011",
 ];
 
 const PRIMARY_PHONE = PHONES[0];

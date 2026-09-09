@@ -39,10 +39,8 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
 const PHONES = [
-  "0556053924",
+  "0563569761",
   "0556295307",
-  "0556029104",
-  "0537912011",
 ];
 
 const NAV = [
@@ -787,7 +785,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-bold text-lg mb-4">تواصل معنا</h4>
             <div className="space-y-3 text-sm">
-              {PHONES.slice(0, 3).map((p) => (
+              {PHONES.map((p) => (
                 <a key={p} href={`tel:${p}`} className="flex items-center gap-2 hover:text-brand-gold transition-colors" >
                   <Phone className="w-4 h-4 text-brand-gold flex-shrink-0" /> {p}
                 </a>
