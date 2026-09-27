@@ -28,7 +28,7 @@ interface ServicePageLayoutProps {
   phones?: string[];
 }
 
-const DEFAULT_PHONES = ["0563569761", "0556295307"];
+const DEFAULT_PHONES = ["0563569761", "0556053924"];
 
 export default function ServicePageLayout({
   slug,
@@ -81,7 +81,8 @@ export default function ServicePageLayout({
     },
   };
 
-  const whatsappUrl = `https://wa.me/966${phones[0].replace(/^0/, "")}`;
+  const WHATSAPP_PHONE = "0556053924";
+  const whatsappUrl = `https://wa.me/966${WHATSAPP_PHONE.replace(/^0/, "")}`;
 
   return (
     <>

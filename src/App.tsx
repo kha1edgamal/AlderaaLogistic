@@ -40,7 +40,7 @@ import ContactPage from "./pages/ContactPage";
 
 const PHONES = [
   "0563569761",
-  "0556295307",
+  "0556053924",
 ];
 
 const NAV = [
@@ -107,6 +107,7 @@ const WHY = [
 ];
 
 const PRIMARY_PHONE = PHONES[0];
+const WHATSAPP_PHONE = "0556053924";
 
 // Flag URLs using flagcdn
 const FLAGS: Record<string, string> = {
@@ -296,7 +297,7 @@ function Hero() {
                 اتصل الآن
               </a>
               <a
-                href={`https://wa.me/966${PRIMARY_PHONE.replace(/^0/, "")}?text=${encodeURIComponent(
+                href={`https://wa.me/966${WHATSAPP_PHONE.replace(/^0/, "")}?text=${encodeURIComponent(
                   "السلام عليكم، أريد الحصول على عرض سعر للشحن"
                 )}`}
                 target="_blank"
@@ -336,30 +337,6 @@ function Hero() {
                   <div>
                     <span className="text-white/60 text-[10px] block">الشحن الدولي والوجهات</span>
                     <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[1]}</span>
-                  </div>
-                </a>
-                <a
-                  href={`tel:${PHONES[2]}`}
-                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 transition-all group justify-start"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <Phone className="w-5 h-5 text-brand-gold" />
-                  </div>
-                  <div>
-                    <span className="text-white/60 text-[10px] block">نقل وتغليف الأثاث</span>
-                    <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[2]}</span>
-                  </div>
-                </a>
-                <a
-                  href={`tel:${PHONES[3]}`}
-                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-gold/50 rounded-2xl p-3 transition-all group justify-start"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <Phone className="w-5 h-5 text-brand-gold" />
-                  </div>
-                  <div>
-                    <span className="text-white/60 text-[10px] block">الدعم وخدمة العملاء</span>
-                    <span className="text-white font-extrabold text-sm tracking-wide" dir="ltr">{PHONES[3]}</span>
                   </div>
                 </a>
               </div>
@@ -697,7 +674,7 @@ function Contact() {
 }
 
 function FloatingCall() {
-  const whatsappUrl = `https://wa.me/966${PRIMARY_PHONE.replace(/^0/, "")}`;
+  const whatsappUrl = `https://wa.me/966${WHATSAPP_PHONE.replace(/^0/, "")}`;
   return (
     <a
       href={whatsappUrl}

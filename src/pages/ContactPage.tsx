@@ -15,7 +15,7 @@ import logoImg from "../assets/logo.png";
 
 const PHONES = [
   "0563569761",
-  "0556295307",
+  "0556053924",
 ];
 
 const PRIMARY_PHONE = PHONES[0];
@@ -56,7 +56,8 @@ export default function ContactPage() {
     }
   };
 
-  const whatsappUrl = `https://wa.me/966${PRIMARY_PHONE.replace(/^0/, "")}`;
+  const WHATSAPP_PHONE = "0556053924";
+  const whatsappUrl = `https://wa.me/966${WHATSAPP_PHONE.replace(/^0/, "")}`;
 
   return (
     <>

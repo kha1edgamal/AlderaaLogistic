@@ -111,7 +111,7 @@ export default function AboutPage() {
     },
     telephone: [
       "+966563569761",
-      "+966556295307",
+      "+966556053924",
     ],
     areaServed: [
       "Saudi Arabia",
